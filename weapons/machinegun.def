@@ -61,7 +61,7 @@ entityDef viewStyle_q3_machinegun {
 
 entityDef weapon_machinegun 
 {
-	"editor_color"				".3 .3 1"
+	"editor_color"				"1 0.03 0.4"
 	"editor_mins"				"-16 -16 0"
 	"editor_maxs"				"16 16 32"
 
@@ -129,8 +129,8 @@ entityDef weapon_machinegun
 	// ---------------------------- Muzzleflash ---------------------------------------
 
 	"mtr_flashShader"			"lights/muzzleflash"
-	"flashColor"				"1 0.8 0.4"
-	"flashRadius"				"200"
+	"flashColor"				"1 0.03 0.4"
+	"flashRadius"				"20000"
 	"flashPointLight"			"1"
 	"flashTime"					".1"
 	"flashViewOffset"			"15 -5 -5"
@@ -186,14 +186,14 @@ entityDef weapon_machinegun
 entityDef weapon_machinegun_mp
 {
 	"inherit"				"weapon_machinegun"
-	"clipsize"				"10"
+	"clipsize"				"20"
   	"def_mod1"				""
   	"inv_icon"				"gfx/guis/hud/icons/item_machinegun_colored"
 	"triggerSize"				"32"
   	
   	// use q3 style spread in MP
   	"machinegunSpreadStyle"			"1"
-  	"spread"				"200"
+  	"spread"				"450"
   	"spreadZoom"				"150"
   	"editor_ignore"				"1"
   	

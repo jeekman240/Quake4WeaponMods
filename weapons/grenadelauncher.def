@@ -81,7 +81,7 @@ entityDef weapon_grenadelauncher
 	"dirOffset"					"0 0 .2"
 	
 	"inv_weapon"				"weapon_grenadelauncher"
-	"inv_start_ammo_grenadelauncher"	"10"
+	"inv_start_ammo_grenadelauncher"	"50"
 	"inv_item"					"1"
 	"inv_icon"					"gfx/guis/hud/icons/item_grenade.tga"
 	"inv_name"					"#str_107403"	
@@ -236,7 +236,7 @@ entityDef projectile_grenade
 	"def_damage"				"damage_grenadeDirect"
 	"def_splash_damage"			"damage_grenadeSplash"
 																											
-	"speed"						"700"
+	"speed"						"1500"
 	"angular_velocity"			"-10 5 1"
 	"settle_duration"			"0.08"
 	
@@ -245,7 +245,7 @@ entityDef projectile_grenade
 	"contact_friction"			"10"
 	"bounce"					".65"
 	"gravity"					"1"
-	"fuse"						"2.5"
+	"fuse"						"1.5"
 								
 	"detonate_on_fuse"			"1"
 	"detonate_on_death"			"0"
@@ -254,7 +254,7 @@ entityDef projectile_grenade
 	"detonateTestGroundMaterial"	"1"
 								
 	"impact_gib"				"1"								
-	"decal_size"				"75"
+	"decal_size"				"750"
 
 	"flyEffectAttenuateSpeed"	"200"
 	
@@ -301,12 +301,12 @@ entityDef damage_grenadeDirect_mp
 {
 	"inherit"					"damage_grenadeDirect"
 	"damage"					"100"
-	"knockback"					"100"
+	"knockback"					"10000"
 }
 
 entityDef damage_grenadeSplash 
 {
-	"damage"					"200"
+	"damage"					"50"
 	"radius"					"250"
 	"knockback"					"100"
 	"push"						"10000"
@@ -325,5 +325,5 @@ entityDef damage_grenadeSplash_mp
 {
 	"inherit"					"damage_grenadeSplash"
 	"damage"					"100"
-	"radius"					"150"
+	"radius"					"350"
 }
