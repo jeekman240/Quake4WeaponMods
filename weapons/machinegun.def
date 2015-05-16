@@ -97,7 +97,7 @@ entityDef weapon_machinegun
 
 	"mtr_crosshair"				"gfx/guis/crosshairs/crosshair_machinegun"
 	"def_hitscan"				"hitscan_bullet"
-	"def_althitscan"			"hitscan_zoomed_bullet"
+	"def_althitscan"			"hitscan_railgun"
 	
 	"ammoType"					"ammo_machinegun"
 	"ammoRequired"				"1"
@@ -112,7 +112,7 @@ entityDef weapon_machinegun
 	"muzzle_kick_maxtime"		"0.6"
 	"muzzle_kick_angles"		"0 0 0"
 	"muzzle_kick_offset"		"0.5 .15 .15"
-
+	
 	"ejectOffset"				"0.5 -1 -1"
 	
 	"ammoRegenStep"				"4"
@@ -125,7 +125,7 @@ entityDef weapon_machinegun
   	"def_mod1"					"wpmod_machinegun_ammo"
 
 	"foreshorten"				".6"
-
+	
 	// ---------------------------- Muzzleflash ---------------------------------------
 
 	"mtr_flashShader"			"lights/muzzleflash"
@@ -205,10 +205,18 @@ entityDef weapon_machinegun_mp
 	"muzzle_kick_offset"			"0 0 0"
 	"recoilTime"				"0"
 	"recoilAngles"				"0 0 0"
-	"def_hitscan"				"hitscan_bullet_mp"
-	"def_althitscan"			"hitscan_zoomed_bullet_mp"
+	"def_hitscan"				"hitscan_railgun"
+	"fxOriginOffset"			"0 0 0"
+
+	"def_althitscan"			"hitscan_railgun"
 	"altFireRate"				".2"
 	
+	"weaponAngleOffsetAverages" "10"
+	"weaponAngleOffsetScale" 	".05"
+	"weaponAngleOffsetMax"		"1"
+	"weaponOffsetTime"			"600"
+	"weaponOffsetScale"			"0.003"
+
 	"respawn_Team DM"			"30"
 	"respawn_Tourney"			"15"
 }
@@ -276,7 +284,7 @@ model weapon_machinegun_view
 {
 	mesh						models/weapons/machinegun/view.md5mesh
 
-	offset						(-1.5 1.7 .25)
+	offset						(-3 1.65 .75)
 
 	anim idle					models/weapons/machinegun/idle.md5anim
 	anim raise					models/weapons/machinegun/raise.md5anim
@@ -408,7 +416,8 @@ entityDef damage_machinegun_zoom_flesh
 //---------------------------------------------------------------
 entityDef hitscan_bullet_mp
 {
-	"inherit"				"hitscan_bullet"
+	"inherit"				"hitscan_railgun_mp"
+	"launchFromBarrel"			"0"
 	"range"					"40000"
 
 	"def_damage"				"damage_machinegun_mp"

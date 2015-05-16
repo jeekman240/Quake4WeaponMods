@@ -94,7 +94,7 @@ entityDef weapon_grenadelauncher
 	"mtr_icon"					"gfx/guis/hud/icons/gun_grenadelauncher"
 
 	"ammoRegenStep"				"1"
-	"ammoRegenTime"				"2000"
+	"ammoRegenTime"				"10"
 
 	"muzzle_kick_time"			"0.8"
 	"muzzle_kick_maxtime"		"0.8"
@@ -139,7 +139,7 @@ entityDef weapon_grenadelauncher
 entityDef weapon_grenadelauncher_mp
 {
 	"inherit"				"weapon_grenadelauncher"
-	"clipsize"				"0"
+	"clipsize"				"3"
 	"editor_ignore"				"1"
 	"inv_icon"				"gfx/guis/hud/icons/item_grenade_colored"
 	"triggerSize"				"32"
@@ -223,14 +223,14 @@ model weapon_grenadelauncher_world
 
 entityDef projectile_grenade
 {
-	"spawnclass"				"idProjectile"
+	"spawnclass"				"rvDarkMatterProjectile"
 	"mins"						"-4 -4 -4"
 	"maxs"						"4 4 4"
 	"cone"						""
 	"noshadows"					"1"
 	"clipmask_largeshot"		"1"
 	
-	"no_contents"				"0"
+	"no_contents"				"1"
 								
 	"model"						"models/weapons/grenadelauncher/w_grenade.lwo"
 	"def_damage"				"damage_grenadeDirect"

@@ -252,8 +252,8 @@ entityDef hitscan_blaster
 entityDef projectile_blaster
 {
 	"spawnclass"				"idProjectile"
-	"mins"						"-2 -2 -2"
-	"maxs"						"2 2 2"
+	"mins"						"-10 -10 -10"
+	"maxs"						"10 10 10"
 	"cone"						"2"
 	"noshadows"					"1"
 																
@@ -284,7 +284,9 @@ entityDef projectile_blaster
 
 entityDef projectile_blaster_charged
 {
-	"inherit"					"projectile_blaster"
+	"inherit"					"projectile_rocket"
+	"speed"						"400"
+	"fuse"						"10"
 
 	"mins"						"-8 -8 -8"
 	"maxs"						"8 8 8"
@@ -327,10 +329,10 @@ entityDef damage_blaster_charged
 
 entityDef damage_blastersplash_charged
 {
-	"inherit"					"damage_blaster"
+	"inherit"					"damage_rocketSplash"
 	
-	"damage"					"40"
-	"radius"					"50"
-	"knockback"					"30"
-	"push"						"2500"
+	//"damage"					"40"
+	"radius"					"200"
+	"knockback"					"3000"
+	//"push"						"2500"
 }
